@@ -1,5 +1,6 @@
 import pygame
 
+
 def draw_text(screen, text, size, color, x, y):
     font = pygame.font.Font('dogicapixelbold.ttf', size)
     text_surface = font.render(text, True, color)
@@ -7,7 +8,8 @@ def draw_text(screen, text, size, color, x, y):
     text_rect.topleft = (x, y)
     screen.blit(text_surface, text_rect)
 
-class Scenes():
+
+class Scenes:
     def __init__(self, level, screen):
         self.level = level - 1
         self.screen = screen
@@ -21,75 +23,149 @@ class Scenes():
         self.con = False
         self.re_space = True
 
-
         if self.level == 1:
             self.text = {
-                1: ["Duck", "Hello, nice to meet you! "],
-                2: ["Duck", "My name is Duck"],
-                3: ["Mon1", "Bye"]
+                1: ["???", "Who are you?"],
+                2: ["Duck", "Quack!"],
+                3: ["???", "Oh...you lost your memories?"],
+                4: ["Duck", "Quack!"],
+                5: ["???", "We are Polo tribe! So, what make you come here?"],
+                6: ["Duck", "Quack! Quack!"],
+                7: ["Polo", "What? You follow a light ball?"],
+                8: ["Polo", "Which light ball? I haven't seen any of it."],
+                9: ["Duck", "Quack! Quack! Quack!"],
+                10: ["Polo", "....."],
+                11: ["Polo", "Don't lie! We don't believe you!"],
+                12: ["Polo", "Go away!"],
+                13: ["Duck", "....."],
+
             }
         elif self.level == 2:
             self.text = {
-                1: ["Duck", "WHat"],
-                2: ["Duck", "Why u look at me like that?"],
-                3: ["Mon", "Yumma na"],
-                4: ["Mon", "Hahahaha"]
+                1: ["Duck", "Quack!"],
+                2: ["???", "Who are we? We are Deaire tribe."],
+                3: ["Duck", "Quack! Quack!"],
+                4: ["Deaire", "So, you lost your memories"],
+                5: ["Deaire", "and follow some light ball here?"],
+                6: ["Duck", "Quack! Quack! Quack!"],
+                7: ["Deaire", "Mmm... Maybe your family is in the forest."],
+                8: ["Duck", "Quack?"],
+                9: ["Deaire", "I once saw the tribe that similar to you."],
+                10: ["Deaire", "They have white fur like you."],
+                11: ["Deaire", "Why don't you go there."],
+                12: ["Deaire", " You might be able to remember something."],
+                13: ["Duck", "Quack! Quack!"],
+                14: ["Deaire", "Good Luck!"]
             }
         elif self.level == 3:
             self.text = {
-                1: ["Duck", "WHat"],
-                2: ["Duck", "Why u look at me like that?"],
-                3: ["Mon", "Yumma na"],
-                4: ["Mon", "Hahahaha"]
+                1: ["???", "Grrr"],
+                2: ["Duck", "Quack..."],
+                3: ["???", "Grrrrrr!"],
+                4: ["Duck", "Quack! Quack! Quack!"]
             }
         elif self.level == 4:
             self.text = {
-                1: ["Duck", "WHat"],
-                2: ["Duck", "Why u look at me like that?"],
-                3: ["Mon", "Yumma na"],
-                4: ["Mon", "Hahahaha"]
+                1: ["Duck", "Quack!"],
+                2: ["???", "Are you okay?"],
+                3: ["Duck", "Quack! Quack!"],
+                4: ["???", "Ah! You are running from the Fover."],
+                5: ["???", "We are Blue."],
+                6: ["Duck", "Quack! Quack?"],
+                7: ["Blue", "You want to drink OUR water?"],
+                8: ["Duck", "Quack!"],
+                9: ["Blue", "I don't think we can share it with you."],
+                10: ["Duck", "Quack?"],
+                11: ["Blue", "You are a stranger. We don't really know you."],
+                12: ["Duck", "Quack..."],
+                13: ["Blue", "I'm sorry."],
+                14: ["Duck", "Quack?"],
+                15: ["Blue", "Oh! I think they are the next tribe."],
+                16: ["Blue", "Go into deeper and you will find them."],
+                17: ["Duck", "Quack!"]
             }
         elif self.level == 5:
             self.text = {
-                1: ["Duck", "WHat"],
-                2: ["Duck", "Why u look at me like that?"],
-                3: ["Mon", "Yumma na"],
-                4: ["Mon", "Hahahaha"]
+                1: ["Duck", "Quack!"],
+                2: ["???", "We are Pao."],
+                3: ["Duck", "Quack! Quack!"],
+                4: ["Pao", "You mean you are one of us?"],
+                5: ["Pao", "But we don't think so."],
+                6: ["Pao", "Despite the color"],
+                7: ["Pao", "you don't have anything like us"],
+                8: ["Duck", "Quack?"],
+                9: ["Pao", "I definitely sure we are NOT your family."],
+                10: ["Duck", "....."],
+                11: ["Pao", "Maybe you can ask the Firb tribe."],
+                12: ["Duck", "Quack!"]
+
             }
         elif self.level == 6:
             self.text = {
-                1: ["Duck", "WHat"],
-                2: ["Duck", "Why u look at me like that?"],
-                3: ["Mon", "Yumma na"],
-                4: ["Mon", "Hahahaha"]
+                1: ["Duck", "Quack! Quack!"],
+                2: ["Firb", "You are from Pao tribe?"],
+                3: ["Duck", "Quack!"],
+                4: ["Firb", "Ah...Sorry ,but we also not your family."],
+                5: ["Duck", "Quack..."],
+                6: ["Firb", "But I know who can help you."],
+                7: ["Duck", "Quack?"],
+                8: ["Firb", "There are fairies who would be able to help you"],
+                9: ["Firb", "They live inside the Moon forest."],
+                10: ["Duck", "Quack?"],
+                11: ["Firb", "Just go along the path and you will find them."],
+                12: ["Duck", "Quack!"]
             }
         elif self.level == 7:
             self.text = {
-                1: ["Duck", "WHat"],
-                2: ["Duck", "Why u look at me like that?"],
-                3: ["Mon", "Yumma na"],
-                4: ["Mon", "Hahahaha"]
+                1: ["???", "Who are you?"],
+                2: ["Duck", "Quack!"],
+                3: ["???", "You want to go into the Moon forest?"],
+                4: ["Duck", "Quack! Quack! Quack?"],
+                5: ["???", "hahaha...No, we are not the fairies."],
+                6: ["Duck", "Quack?"],
+                7: ["???", "We are Fink tribe."],
+                8: ["Fink", "If you want to find the fairies."],
+                9: ["Fink", "You have to find the place"],
+                10: ["Fink", "where you can see the moon clearly."],
+                11: ["Duck", "Quack!"],
+                12: ["Fink", "But be careful."],
+                13: ["Fink", "The night in the forest is very dangerous."],
+                14: ["Duck", "Quack!"]
             }
         elif self.level == 8:
             self.text = {
-                1: ["Duck", "WHat"],
-                2: ["Duck", "Why u look at me like that?"],
-                3: ["Mon", "Yumma na"],
-                4: ["Mon", "Hahahaha"]
+                1: ["Duck", "Quack! Quack!"],
+                2: ["???", "Come here, come closer."],
+                3: ["Duck", "Quack???"],
+                4: ["???", "Just come closer."],
+                5: ["Duck", "Quack..."],
+                6: ["???", "Come closer,and we Ladyfrog will eat you!"],
+                7: ["Duck", "Quack! Quack! Quack!"]
             }
         elif self.level == 9:
             self.text = {
-                1: ["Duck", "WHat"],
-                2: ["Duck", "Why u look at me like that?"],
-                3: ["Mon", "Yumma na"],
-                4: ["Mon", "Hahahaha"]
+                1: ["Duck", "Quack! Quack!"],
+                2: ["???", "Calm down. Clam down. "],
+                3: ["Duck", "Quack!!!"],
+                4: ["???", "Yes, we are the fairies"],
+                5: ["Fairy", "You want to find you family ,right?"],
+                6: ["Duck", "Quack! Quack!"],
+                7: ["Fairy", "Walk along the river"],
+                8: ["Fairy", "and you will find them."],
+                9: ["Fairy", "Don't get your hopes too high."],
+                10: ["Fairy", "Everything might not turn out"],
+                11: ["Fairy", "to be like what you expected."],
+                12: ["Duck", "....."]
             }
         elif self.level == 10:
             self.text = {
-                1: ["Duck", "WHat"],
-                2: ["Duck", "Why u look at me like that?"],
-                3: ["Mon", "Yumma na"],
-                4: ["Mon", "Hahahaha"]
+                1: ["Duck", "Quack! Quack! Quack!"],
+                2: ["Family", "Quack! Quack?"],
+                3: ["Duck", "Quack!?"],
+                4: ["Family", "Quack! Quack! Quack! Quack!"],
+                5: ["Duck", "Quack..."],
+                6: ["Family", "Quack! Quack! Quack! Quack!"],
+                7: ["Duck", "....."]
             }
 
         self.text_counter = 0
@@ -97,7 +173,7 @@ class Scenes():
         '''light ball'''
         self.image_list_light = []
         for index in range(10):
-            image_name_light = 'Pic\\light_ball\\level' + str(self.level) + '\\level' +  str(self.level) + '-' + \
+            image_name_light = 'Pic\\light_ball\\level' + str(self.level) + '\\level' + str(self.level) + '-' + \
                                str(index + 1) + '.png'
             self.image_list_light.append(pygame.image.load(image_name_light).convert_alpha())
 
@@ -192,16 +268,21 @@ class Scenes():
                 self.light_x += 10
 
         elif self.step == 2:
-            if self.enemy_x > 800:
-                self.enemy_x -= 5
-            elif self.enemy_x <= 800:
-                self.re_space = True
-            if self.light_x < 1200:
+
+            if self.light_x < 1210:
                 self.light_x += 10
 
+            if self.enemy_x > 800:
+                self.enemy_x -= 5
+
+            elif self.light_x >= 1210 and self.enemy_x <= 800:
+                self.re_space = True
+
         elif self.step == len(self.text):
+
             if self.enemy_x < 1210:
                 self.enemy_x += 5
+
             elif self.enemy_x >= 1210:
                 self.re_space = True
         else:
@@ -212,7 +293,7 @@ class Scenes():
 
         '''First dialogue'''
         if self.step == len(self.text) + 1:
-                self.con = True
+            self.con = True
 
         elif int(self.text_counter) < len(self.text[self.step][1]):
             self.text_counter += 0.4
@@ -248,10 +329,10 @@ class Scenes():
             speaker_name = font.render(self.text[self.step][0], False, (255, 255, 255))
             speaker_rect = speaker_name.get_rect(topright=(5, 300))
             if self.text[self.step][0] != 'Duck':
-                speaker_rect = speaker_name.get_rect(topright=(1050, 460))
+                speaker_rect = speaker_name.get_rect(topright=(1100, 460))
                 self.speak_box_rect = self.speak_box.get_rect(topleft=(950, 440))
                 self.screen.blit(self.speak_box, self.speak_box_rect)
-                speaker_rect_shadow = speaker_name_shadow.get_rect(topright=(1055, 463))
+                speaker_rect_shadow = speaker_name_shadow.get_rect(topright=(1105, 463))
 
             elif self.text[self.step][0] == 'Duck':
                 speaker_rect = speaker_name.get_rect(topright=(100, 460))
@@ -261,7 +342,6 @@ class Scenes():
 
             self.screen.blit(speaker_name_shadow, speaker_rect_shadow)
             self.screen.blit(speaker_name, speaker_rect)
-
 
     def display_escape(self):
         font_esc = pygame.font.Font('dogicapixelbold.ttf', 20)
@@ -293,13 +373,15 @@ class Scenes():
                 550
             )
 
-
     def check_con(self):
         if self.con is True:
             return False
 
-    def runnning_scene(self):
+    def running_scene(self):
 
+        display_surf = pygame.display.set_mode((0, 600))
+
+        self.screen.fill((0, 0, 0))
         background_image = 'Pic\\bg\\bg' + str(self.level) + '.png'
         background = pygame.image.load(background_image)
         self.screen.blit(background, (0, 0))
@@ -307,7 +389,6 @@ class Scenes():
         self.display_escape()
         self.display_speaker()
 
-        display_surf = pygame.display.set_mode((0,600))
         display_surf.blit(self.text_box, (0, 500))
         self.text_update()
 
@@ -319,13 +400,10 @@ class Scenes():
         self.display_speaker()
 
 
-
-class Walk_Scene():
+class Walk_Scene:
     def __init__(self, level, screen, music):
         self.level = level - 1
         self.screen = screen
-        # self.player_sprite = Player_scene_walk(self.level, (300,380))
-        # self.player = pygame.sprite.GroupSingle(self.player_sprite)
         self.con = None
 
         self.image_list_player = []
@@ -356,7 +434,7 @@ class Walk_Scene():
 
         self.image_player = self.image_list_player[self.image_order]
 
-        self.screen.blit(self.image_player,(self.player_x,self.player_y))
+        self.screen.blit(self.image_player, (self.player_x, self.player_y))
 
     def check_con(self):
         if self.player_x == 1200:
@@ -364,24 +442,21 @@ class Walk_Scene():
         if self.player_x == 1050:
             self.music.fadeout(600)
 
-    # def check_walk_scene(self):
-    #     return self.player_sprite.check_player()
-
     def running_scene(self):
 
-        self.screen.fill(((0, 0, 0)))
+        self.screen.fill((0, 0, 0))
         background_image = 'Pic\\bg\\bg' + str(self.level) + '.png'
         background = pygame.image.load(background_image)
         self.screen.blit(background, (0, 0))
 
         self.player_pic()
 
-class Game_over_scene():
+
+class Game_over_scene:
 
     def __init__(self, screen, score):
         self.screen = screen
         self.font = pygame.font.Font('dogicapixel.ttf', 50)
-        # self.image.player = pygame.image.load('Pic\\Player\\Player.png')
         self.score = score
 
     def display_text(self):
@@ -391,7 +466,7 @@ class Game_over_scene():
         self.screen.blit(game_over_text, game_over_rect)
 
         font2 = pygame.font.Font('dogicapixelbold.ttf', 20)
-        press_text = font2.render(f'Press enter', False, (255,255,255))
+        press_text = font2.render(f'Press enter', False, (255, 255, 255))
         press_rect = press_text.get_rect(topright=(1000, 400))
         self.screen.blit(press_text, press_rect)
 
@@ -401,16 +476,12 @@ class Game_over_scene():
         self.screen.blit(final_score, final_score_rect)
 
     def update(self):
-
         self.screen.fill((0, 0, 0))
         self.display_text()
 
-        # display_surf = pygame.display.set_mode((0, 600))
-        #
-        # display_surf.blit(self.image_player,(0,500))
 
-class Intro():
-    def __init__(self,screen):
+class Intro:
+    def __init__(self, screen, game_bg_channel):
         self.screen = screen
         self.image_list_player = []
         self.image_list_light = []
@@ -442,7 +513,11 @@ class Intro():
         '''Intro music'''
         self.music = pygame.mixer.Sound('Music\\level\\intro.mp3')
         self.music.set_volume(0.2)
-        self.music.play(loops=-1)
+        self.game_bg_channel = game_bg_channel
+
+        self.game_bg_channel.play(self.music, loops=-1)
+
+        self.startle = 0
 
     def player_pic(self):
 
@@ -459,7 +534,12 @@ class Intro():
 
         elif self.run_player_action is True:
             self.image_player = pygame.image.load('Pic\\Player\\intro\\!.png')
-
+            if self.startle <= 1:
+                self.startle += 1
+            if self.startle == 1:
+                startle = pygame.mixer.Sound('Sound_effect\\startle.wav')
+                startle.set_volume(0.3)
+                startle.play()
         else:
             self.image_player = self.image_list_player[0]
 
@@ -519,9 +599,8 @@ class Intro():
             elif self.step == 6:
                 self.run_player_pic = True
                 self.player_x += 5
-                if self.player_x == 1050:
-                    self.music.fadeout(30)
-                if self.player_x >= 1200:
+                if self.player_x >= 1250:
+                    self.game_bg_channel.stop()
                     self.re_space = True
                     self.run_player_pic = False
                     self.step += 1
@@ -534,7 +613,7 @@ class Intro():
             self.re_space = False
 
         elif keys[pygame.K_ESCAPE]:
-            self.music.fadeout(30)
+            self.game_bg_channel.stop()
             self.step = 7
 
     def display_escape(self):
@@ -548,10 +627,23 @@ class Intro():
         esc_rect = esc_text.get_rect(topright=(1150, 10))
         self.screen.blit(esc_text, esc_rect)
 
+    def display_space(self):
+        if self.re_space is True:
+            font_space = pygame.font.Font('dogicapixelbold.ttf', 20)
+
+            space_text_shadow = font_space.render(f'Press Space', False, (39, 20, 4))
+            space_rect_shadow = space_text_shadow.get_rect(topright=(1095, 746))
+            self.screen.blit(space_text_shadow, space_rect_shadow)
+
+            space_text = font_space.render(f'Press Space', False, (255, 255, 255))
+            space_rect = space_text.get_rect(topright=(1100, 745))
+            self.screen.blit(space_text, space_rect)
+
     def running(self):
         background = pygame.image.load('Pic\\bg\\bg1.png')
         self.screen.blit(background, (0, 0))
         self.display_escape()
+        self.display_space()
 
         self.player_pic()
         self.light_pic()
@@ -563,8 +655,9 @@ class Intro():
         else:
             return True
 
-class End_scene():
-    def __init__(self, screen):
+
+class End_scene:
+    def __init__(self, screen, display_score):
         self.screen = screen
         self.image_list_player = []
         self.image_list_light = []
@@ -595,17 +688,19 @@ class End_scene():
 
         '''Music'''
         self.music = pygame.mixer.Sound('Music\\level\\end.mp3')
-        self.music.set_volume(0.2)
-        self.music.play()
+        self.music.set_volume(0.1)
+        self.music.play(loops=-1)
 
         '''Sound Effect'''
         self.sound = pygame.mixer.Sound('Sound_effect\\glass_break.mp3')
-        self.sound.set_volume(0.7)
+        self.sound.set_volume(0.5)
         self.trigger_sound = 0
 
+        '''Font'''
         self.font = pygame.font.Font('dogicapixelbold.ttf', 20)
 
-
+        '''Final score'''
+        self.final_score = display_score
 
     def player_pic(self):
 
@@ -628,6 +723,14 @@ class End_scene():
 
         if 2 <= self.step:
             self.screen.blit(self.image_player, (self.player_x, self.player_y))
+
+    def display_space(self):
+        if self.re_space is True and self.step <= 6:
+            font_space = pygame.font.Font('dogicapixelbold.ttf', 20)
+
+            space_text = font_space.render(f'Press Space', False, (255, 255, 255))
+            space_rect = space_text.get_rect(topright=(1100, 745))
+            self.screen.blit(space_text, space_rect)
 
     def light_pic(self):
 
@@ -678,9 +781,6 @@ class End_scene():
             elif self.step == 6:
                 self.re_space = True
 
-            else:
-                self.re_space = True
-
     def get_input(self):
         keys = pygame.key.get_pressed()
 
@@ -696,6 +796,7 @@ class End_scene():
         self.light_pic()
         self.get_input()
         self.step_display()
+        self.display_space()
 
         if self.step >= 5:
             self.screen.fill((0, 0, 0))
@@ -703,6 +804,11 @@ class End_scene():
             end_text = self.font.render(f'The end', False, (255, 255, 255))
             end_rect = end_text.get_rect(topright=(1100, 745))
             self.screen.blit(end_text, end_rect)
+
+            score_text = self.font.render(f'score: {self.final_score}', False, (255, 255, 255))
+            score_rect = score_text.get_rect(topright=(300, 745))
+            self.screen.blit(score_text, score_rect)
+
             pygame.time.delay(100)
             self.re_space = True
 
@@ -710,5 +816,3 @@ class End_scene():
             return False
         else:
             return True
-
-
