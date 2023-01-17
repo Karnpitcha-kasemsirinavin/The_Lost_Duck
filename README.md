@@ -2,9 +2,9 @@ What is this game about?
 This project is a RPG game called 'The Lost Duck'. Player will play as a little duck that lost it memories and follow the mysterious light to find itself. Along the journey, the little duck encounter many creatures and learn about itself. In this game, player has to pass each level to continue the journey of the duck by eliminating every enemy in each level.
 
 Control:
-W => up
-S => down
-Spacebar => Shooting
+W => up,
+S => down,
+Spacebar => Shooting,
 Q => Ultimate
 
 The concept of this game:
